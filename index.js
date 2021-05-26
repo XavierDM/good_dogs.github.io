@@ -56,7 +56,7 @@ btn.addEventListener('click', () => {
             })
             .catch(err => console.log(err))
     } else if (insertionVL === "cat" || insertionVL === "cats") {
-        alert("We're sorry this a cat free zone, here's a random dog image!")
+        alert("We're sorry, this a cat free zone! Here's a random good dog to show you the light!")
         fetch("https://dog.ceo/api/breeds/image/random")
             .then(res => res.json())
             .then(result => {
