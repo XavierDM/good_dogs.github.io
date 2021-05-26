@@ -62,12 +62,6 @@ btn.addEventListener('click', () => {
             .then(result => {
                 console.log(result)
                 image.src = result.message
-                var x = document.createElement('img')
-                x.setAttribute('src', 'https://media.giphy.com/media/3o7527pa7qs9kCG78A/giphy.gif')
-                x.setAttribute('width', 'auto')
-                x.setAttribute('height', 'auto')
-                x.setAttribute('alt', 'dog gif')
-                container.appendChild(x)
             })
             .catch(err => console.log(err))
     } else if (insertionVL === "chihuahua") {
