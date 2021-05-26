@@ -41,7 +41,7 @@ button {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(circle, rgba(252, 176, 69, 0.8) 0%, rgb(197, 5, 5, 1) 50%, rgba(131, 58, 180, 1) 100%);
+    background: radial-gradient(circle, rgba(252, 176, 69, 1) 0%, rgb(197, 5, 5, 1) 50%, rgba(131, 58, 180, 1) 100%);
     height: 100vh;
     width: 100vw;
 }
