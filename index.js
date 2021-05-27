@@ -38,6 +38,11 @@ form.addEventListener('submit', (e) => {
     e.preventDefault
 }) */
 
+
+
+
+
+
 let container = document.querySelector('container')
 console.log(container)
 let btn = document.getElementById('searchBtn')
@@ -46,6 +51,14 @@ btn.addEventListener('click', () => {
     var insertionV = insertion.value
     var insertionVL = insertionV.toLowerCase()
     console.log(insertion.value)
+    /*     fetch('https://dog.ceo/api/breeds/hound/list')
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+            })
+            .catch(function (response) {
+                console.log("error!")
+            }); */
     if (insertionVL == "") {
         alert("You forgot to enter a dog breed, here's a random dog image.")
         fetch("https://dog.ceo/api/breeds/image/random")
@@ -66,23 +79,27 @@ btn.addEventListener('click', () => {
             .catch(err => console.log(err))
     } else if (insertionVL === "chihuahua") {
         alert("You will be shown a mutated rat. Viewer discretion is advised")
-        fetch(`https://dog.ceo/api/breed/${insertionVL}/images/random`)
+        fetch(`https://dog.ceo/api/breed/${insertionVL}/images/random/3`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
                 image.src = result.message
             })
             .catch(err => console.log(err))
-    }
-    else {
-        alert(`Aren't ${insertionVL} the best?`)
-        fetch(`https://dog.ceo/api/breed/${insertionVL}/images/random`)
-            .then(res => res.json())
-            .then(result => {
+    } else {
+        fetch(`https://dog.ceo/api/breed/${insertionVL} / images / random / `)
+        .then(res => res.json())
+        .then(result => {
+            if (result.status === "error") {
+                alert(`Sorry, ${insertionVL}  isn't a dog breed`)
+            } else {
                 console.log(result)
+                alert(`Aren't ${insertionVL} the best?`)
                 image.src = result.message
-            })
-            .catch(err => console.log(err))
+            }
+
+        })
+
     }
 })
 
@@ -99,4 +116,4 @@ btn.addEventListener('click', () => {
             image.src = result.message
         })
         .catch(err => console.log(err))
-}) */
+) */
