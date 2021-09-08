@@ -27,7 +27,7 @@ btn.addEventListener('click', () => {
             .catch(err => console.log(err))
     } else if (insertionVL === "chihuahua") {
         alert("You will be shown a mutated rat. Viewer discretion is advised")
-        fetch(`https://dog.ceo/api/breed/${insertionVL}/images/random/3`)
+        fetch(`https://dog.ceo/api/breed/${insertionVL}/images/random/`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
