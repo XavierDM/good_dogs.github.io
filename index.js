@@ -1,5 +1,4 @@
 let container = document.querySelector('container')
-console.log(container)
 let btn = document.getElementById('searchBtn')
 btn.addEventListener('click', () => {
     var insertion = document.querySelector("#inputVal")
